@@ -46,7 +46,7 @@ app.post('/bookings', (req, res) => {
 
     const booking = {
         id: bookings.length + 1,
-        customerName: customerName.trim(), // Trim the customer name
+        customerName: customerName.trim(), 
         date,
         startTime,
         endTime,
@@ -98,7 +98,7 @@ app.get('/get-customers', (req, res) => {
 // Listing all customer's booking details
 app.get('/customer-bookings/:customerName', (req, res) => {
     const { customerName } = req.params;
-    const customerBookings = bookings.filter(booking => booking.customerName === customerName.trim()); // Trim the customer name
+    const customerBookings = bookings.filter(booking => booking.customerName === customerName.trim()); 
     res.json(customerBookings);
 });
 
